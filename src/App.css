@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+* {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  width: 800px;
+  height: 50px;
+  display: block;
+  margin: 0;
+  font-size: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.container {
+  background-color: #ededed;
+  height: 100%;
+}
+.header {
+  height: 400px;
+  background-image: url(./images/img1.jpg);
+  background-size: 100%;
+}
+.footer {
+  height: 400px;
+  background: #4194d8;
+}
+/* 處理item */
+.item {
+  width: 100%;
+  column-count: 5; /*欄數*/
+  column-gap: 10px; /*每欄間隔*/
+}
+.view-card {
+  border: 1px solid #000;
+  margin: 0.5rem auto;
+  break-inside: avoid;
+}
+.info {
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.errorMessage {
+  font-size: 3rem;
+  color: red;
 }
