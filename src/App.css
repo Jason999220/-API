@@ -33,7 +33,7 @@ input {
 /* 處理item */
 .item {
   width: 100%;
-  column-count: 5; /*欄數*/
+  column-count: 4; /*欄數*/
   column-gap: 10px; /*每欄間隔*/
 }
 .view-card {
@@ -48,4 +48,44 @@ input {
 .errorMessage {
   font-size: 3rem;
   color: red;
+}
+
+/* 加載動畫 */
+.loading {
+  opacity: 0;
+  /* 隱藏 */
+  display: flex; /* 可變動 */
+  justify-content: center;
+  margin-top: 1rem;
+  /* transform: translateX(-50%); */
+  transition: opacity 0.3s ease-in; /* 讓opacity 從0~1 0.3s */
+}
+.show {
+  opacity: 1; /* 顯示 */
+}
+/* 顯示加載球球 */
+.ball {
+  background-color: #777;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  animation: jump 0.5s ease-in infinite;
+}
+/* 製造ball時間差 */
+.ball:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.ball:nth-child(3) {
+  animation-delay: 0.2s;
+}
+/* 製造jump高度*/
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
